@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@evoapi/design-system/avata
 import { Button } from "@evoapi/design-system/button";
 import { Input } from "@/components/ui/input";
 import { ArrowLeft, MessageCircle, Search, User, Users } from "lucide-react";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -67,13 +67,14 @@ function Chat() {
 
       setRealtimeChats((prev) => {
         const idx = prev.findIndex((c) => c.remoteJid === jid);
-        const obj: ChatType = {
+        const obj = {
           id: jid,
           remoteJid: jid,
           pushName: data?.data?.pushName || formatJid(jid),
           profilePicUrl: data?.data?.key?.profilePictureUrl || "",
           ...(data?.data as Partial<ChatType>),
-        };
+          labels: ((data?.data as Partial<ChatType> | undefined)?.labels) ?? null,
+        } as ChatType;
         if (idx !== -1) {
           const next = [...prev];
           next[idx] = { ...next[idx], ...obj };
