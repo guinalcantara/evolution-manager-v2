@@ -70,7 +70,7 @@ function Chat() {
         const obj = {
           id: jid,
           remoteJid: jid,
-          pushName: data?.data?.pushName || formatJid(jid),
+          pushName: rawChat?.pushName || formatJid(jid),
           profilePicUrl: data?.data?.key?.profilePictureUrl || "",
           ...(data?.data as Partial<ChatType>),
           labels: ((data?.data as Partial<ChatType> | undefined)?.labels) ?? null,
