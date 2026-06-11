@@ -22,6 +22,101 @@
     "unMarkAll": "Desmarcar Todos",
     "refresh": "Actualizar"
   },
+  "testInteractive": {
+    "title": "Probar mensajes interactivos",
+    "subtitle": "Instancia: {{instance}} ·",
+    "number": "Número de destino",
+    "numberHint": "Con código de país/área, solo dígitos (ej.: 5511999999999)",
+    "payload": "Payload JSON (editable)",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "requiresOpen": "Disponible solo con la instancia conectada",
+    "tabs": {
+      "reply": "Reply",
+      "cta": "CTA",
+      "pix": "PIX",
+      "list": "Lista",
+      "carousel": "Carrusel"
+    },
+    "success": "Mensaje enviado (id {{id}})",
+    "errors": {
+      "missingNumber": "Indica el número de destino",
+      "invalidJson": "JSON inválido: {{message}}",
+      "unknown": "Error al enviar el mensaje"
+    }
+  },
+  "sessions": {
+    "filters": {
+      "title": "Filtros avanzados",
+      "name": "Filtrar por nombre",
+      "namePlaceholder": "Filtrar por nombre",
+      "number": "Filtrar por número",
+      "numberPlaceholder": "Filtrar por número",
+      "status": "Filtrar por estado",
+      "time": "Filtrar por tiempo",
+      "apply": "Aplicar filtros",
+      "clear": "Limpiar",
+      "statusOptions": {
+        "all": "Todos los estados",
+        "opened": "Abierta",
+        "paused": "Pausada",
+        "closed": "Cerrada"
+      },
+      "timeOptions": {
+        "all": "Cualquier momento",
+        "5": "Últimos 5 minutos",
+        "10": "Últimos 10 minutos",
+        "15": "Últimos 15 minutos",
+        "20": "Últimos 20 minutos",
+        "30": "Últimos 30 minutos",
+        "60": "Últimos 60 minutos",
+        ">60": "Más de 60 minutos",
+        ">120": "Más de 2 horas",
+        ">300": "Más de 5 horas",
+        ">1440": "Más de 24 horas",
+        "custom": "Personalizado"
+      },
+      "custom": {
+        "more": "Más que",
+        "less": "Menos que",
+        "valuePlaceholder": "Valor",
+        "minutes": "Minutos",
+        "hours": "Horas",
+        "days": "Días"
+      }
+    },
+    "mass": {
+      "title": "Acciones masivas",
+      "selectAll": "Seleccionar todos",
+      "selected": "{{count}} seleccionada(s)",
+      "newStatus": "Nuevo estado",
+      "apply": "Aplicar a seleccionadas",
+      "noneSelected": "Selecciona al menos una sesión",
+      "success": "Estado actualizado en las sesiones seleccionadas",
+      "error": "Error al actualizar el estado en masa"
+    },
+    "pagination": {
+      "showing": "Mostrando {{shown}} de {{total}}",
+      "perPage": "Por página",
+      "showMore": "Cargar más",
+      "showAll": "Mostrar todas",
+      "showLess": "Mostrar menos"
+    },
+    "send": {
+      "title": "Enviar mensaje",
+      "to": "Para",
+      "messagePlaceholder": "Escribe tu mensaje",
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "empty": "Escribe un mensaje antes de enviar",
+      "success": "Mensaje enviado correctamente",
+      "error": "Error al enviar el mensaje"
+    },
+    "actions": {
+      "sendMessage": "Enviar mensaje"
+    },
+    "empty": "No se encontraron sesiones"
+  },
   "modal": {
     "delete": {
       "title": "Eliminar Registro",
@@ -81,14 +176,31 @@
     "flowise": "Flowise",
     "documentation": "Documentación",
     "postman": "Postman",
-    "discord": "Discord",
-    "supportPremium": "Soporte Premium"
+    "discord": "Discord"
   },
   "toast": {
     "instance": {
       "created": "Instancia creada con éxito",
       "deleted": "Instancia eliminada con éxito",
       "error": "Ocurrió un error al crear la instancia"
+    }
+  },
+  "license": {
+    "checking": "Verificando licencia...",
+    "required": "Licencia requerida",
+    "redirecting": "Redirigiendo al registro de licencia...",
+    "registerFailed": "Error al iniciar el registro de licencia",
+    "callback": {
+      "title": "Activando licencia",
+      "missingCode": "Código de autorización no encontrado en la URL",
+      "missingCredentials": "Credenciales no encontradas. Inicia sesión nuevamente.",
+      "activating": "Espera mientras activamos tu licencia.",
+      "successTitle": "¡Licencia activada!",
+      "successDescription": "Redirigiendo...",
+      "errorTitle": "Error en la activación",
+      "retry": "Intentar de nuevo",
+      "back": "Volver al inicio de sesión",
+      "genericError": "Error al activar la licencia"
     }
   },
   "login": {

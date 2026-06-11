@@ -67,18 +67,14 @@ function Chat() {
 
       setRealtimeChats((prev) => {
         const idx = prev.findIndex((c) => c.remoteJid === jid);
-        const rawChat = data?.data as Partial<ChatType>;
-        const obj: ChatType = {
-          ...rawChat,
+        const obj = {
           id: jid,
           remoteJid: jid,
           pushName: rawChat?.pushName || formatJid(jid),
           profilePicUrl: data?.data?.key?.profilePictureUrl || "",
-          labels: rawChat?.labels ?? null,
-          createdAt: rawChat?.createdAt || new Date().toISOString(),
-          updatedAt: rawChat?.updatedAt || new Date().toISOString(),
-          instanceId: rawChat?.instanceId || instance?.id || "",
-        };
+          ...(data?.data as Partial<ChatType>),
+          labels: ((data?.data as Partial<ChatType> | undefined)?.labels) ?? null,
+        } as ChatType;
         if (idx !== -1) {
           const next = [...prev];
           next[idx] = { ...next[idx], ...obj };
