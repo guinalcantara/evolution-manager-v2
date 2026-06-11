@@ -56,10 +56,9 @@ export const useFetchProxyGo = (props: UseQueryParams<FetchProxyResponse> & Part
       let id = list?.find((i) => i.name === instanceName)?.id;
       if (!id) {
         const singleEntries = qc.getQueriesData<Instance>({ queryKey: ["instance", "fetchInstance", "go"] });
-        for (const [, entry] of singleEntries) {
-          if (!entry) continue;
-          if (entry.name === instanceName) {
-            id = entry.id;
+        for (const [, data] of singleEntries) {
+          if (data && data.name === instanceName) {
+            id = data.id;
             break;
           }
         }
